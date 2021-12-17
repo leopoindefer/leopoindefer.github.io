@@ -590,5 +590,83 @@ h1 {
       right: 0;
       }
 
+.piedpageparcours {
+	position: absolute;
+	background-color: #23232C;
+	top: 1000px;
+	width: 100%;
+	height: 250px;
+}
+
+.downloadparcours {
+	float: left;
+	margin-top: 20px;
+	margin-left: 80%;
+	color: white;
+}
+
+.cv2parcours {
+	margin-top: 0px;
+	float: left;
+	margin-left: 82%;
+	width: 100px;
+	height: 150px;
+}
+
+.button2parcours {
+      float: left;
+      position: absolute;
+      display: inline-block;
+      background-color: black;
+      border-radius: 5px;
+      border: 0px double #cccccc;
+      color: white;
+      text-align: center;
+      font-family: calibri;
+      font-size: 15px;
+      padding: 20px;
+      width: 120px;
+      transition: all 0.5s;
+      cursor: pointer;
+      top: 120px; left: 50%; /* à 50%/50% du parent référent */
+	transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    background: rgba(0, 0, 0, 0.6);
+    height: 15px;
+    text-decoration: none;
+      }
+
+.button2parcours span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      }
+.button2parcours span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+      }
+.button2parcours:hover {
+      background-color: black;
+      }
+.button2parcours:hover span {
+      padding-right: 25px;
+      }
+.button2parcours:hover span:after {
+      opacity: 1;
+      right: 0;
+      }
+
+.contactparcours {
+	color: white;
+	position: absolute;
+	margin-top: 40px;
+	left: 50%; /* à 50%/50% du parent référent */
+	transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+}
+
 </style>
 	
