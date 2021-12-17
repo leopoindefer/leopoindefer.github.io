@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="cv.css">		
+		<title>MON CV</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+		<meta name="description" content="" >
+		
+	</head>
+		
+		<body>
+
+		<header>
+
+		<div class="piedpage">
+		<h3 class="contact">Mon site CV vous plaît ?</h3>
+		<a class="button2" href="mecontacter.php">CONTACTEZ MOI</a>
+		<h3 class="download">Télécharger mon CV</h3></br>
+		<a href="CV_Léo_Poindefer.pdf" target="_blank"><img src="images/cv2.jpg" class="cv2"/></a>
+	</div>
+
+            <form method="post" class="mail">
+            <h2>Envoyez moi un mail ! </h2>
+                <label>Votre nom (obligatoire)</label></br>
+                <input type="name" name="message" required><br><br>
+                <label>Votre-email (obligatoire)</label></br>
+                <input type="email" name="email" required><br><br>
+                <label>Sujet</label></br>
+                <input type="text" name="message" required><br><br>
+                <label>Votre message</label></br>
+                <textarea name="message" required></textarea><br><br>
+                <input type="submit">
+            </form>
+            <?php
+            if (isset($_POST['message'])) {
+                $position_arobase = strpos($_POST['email'], '@');
+                if ($position_arobase === false)
+                    echo '<p>Votre email doit comporter un arobase.</p>';
+                else {
+                    $retour = mail('poindeferleo@hotmail.fr', 'Envoi depuis la page Contact', $_POST['message'], 'From: ' . $_POST['email']);
+                    if($retour)
+                        echo '<p>Votre message a été envoyé.</p>';
+                    else
+                        echo '<p>Erreur.</p>';
+                }
+            }
+            ?>
+
+    		<div class="banner2">
+				
+			<div class="menu">
+				<ul>
+					<li class="menunotif" ><a href="diplome.php">Diplômes et formations</a></li>
+					<li class="menuesp" ><a href="exp.php">Expériences professionelles</a></li>
+					<li class="menuevenement" ><a href="comp.php">Compétences</a></li>
+					<li class="menusdv" ><a href="aq.php">Atouts & qualités</a></li>
+					<li class="menubb" ><a href="coord.php">Coordonnées</a></li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<div class="banner">
+			<a href="index"><font size="+2" class="nom">Léo Poindefer</a>
+		</div>	
+			
+		<div class="bannerinscription">
+			<div class="trait"/><a href="index.php" class="moncv">MON CV</a>
+		</div>
+		
+		<div class="bannerconnect">
+			<div class="trait2"/><a href="parcours.php" class="monparcours">MON PARCOURS</a></font>
+			<div class="trait3"/>
+		</div>	
+			
+		</header>
+		
+		<footer>
+		</footer>
+	
+	</body>
+
+</html>
