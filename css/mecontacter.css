@@ -6,7 +6,7 @@
 .mail {
     float: left;
     position: absolute;
-    top: 250px; left: 50%; /* à 50%/50% du parent référent */
+    top: 250px; left: 40%; /* à 50%/50% du parent référent */
 	transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
 }
 
