@@ -10,6 +10,31 @@
 	transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
 }
 
+.telimg {
+	height: 20px;
+	width: 20px;
+	margin-left: -10px;
+}
+
+.mailimg {
+	height: 20px;
+	width: 20px;
+	margin-left: -10px;
+}
+
+.lien {
+	float: left;
+	position: absolute;
+	margin-left: 60%;
+	margin-top: 85px;
+}
+
+.lienimg {
+	height: 20px;
+	width: 20px;
+	margin-left: -10px;
+}
+
 html {
 	font-family: Quicksand_Book;
 	background-color: white;
