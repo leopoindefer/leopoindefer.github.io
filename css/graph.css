@@ -30,7 +30,7 @@ body {
 	overflow: hidden;
 	position: fixed;
 	margin-left: 400px;
-	background-color: #525050;
+	background-color: #F5F5DC;
 	color: black;
 	top: 0px;
 	height: 50px;
@@ -118,7 +118,7 @@ body {
 	margin-top: 50px;
 	overflow: hidden;
 	height: 40px;
-	background-color: #525050;
+	background-color: #F5F5DC;
 	position: fixed;
 }
 
@@ -149,12 +149,12 @@ body {
 
 .menu ul li a {
 	text-decoration: none;
-	color: white;
+	color: black;
 	display: inline-block;
 	height: 70px;
 	width: 	200px;
 	text-align: center; 
-	background-color: #525050;
+	background-color: #F5F5DC;
 	padding-top: 0px;
 }
 
@@ -166,7 +166,7 @@ body {
 .moncv {
 	float: left;
 	text-decoration: none;
-	color: white;
+	color: black;
 	margin-left: 35px;
 	margin-top: 10px;
     width: 200px;
