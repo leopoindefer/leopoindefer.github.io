@@ -280,8 +280,8 @@ body {
 				 
 			}
 			.timeline2   *, .timeline2   *::before, .timeline2   *::after { 
-				font: normal 16px/1.5 
-				color: #fff;
+				font: normal 16px/1.5; 
+				color: black;
 				margin: 0;
 				padding: 0;
 				box-sizing: border-box;
@@ -334,7 +334,7 @@ body {
 			  height: 30px;
 			  border-radius: 50%;
 			  background: inherit;
-			  border: 2px solid #74B0EF;
+			  border: 2px solid #F5F5DC;
 			}
 
 			.timeline2 ul li div {
@@ -342,7 +342,7 @@ body {
 			  bottom: 0;
 			  width: 400px;
 			  padding: 15px;
-			  background: #74B0EF;
+			  background: #F5F5DC;
 			  
 			}
 
