@@ -90,7 +90,7 @@ body {
 	width:5px;
     border-left:1px solid gray;
     height: 100px;
-	margin-left: -49px;
+	margin-left: 50px;
 	margin-top: -10px;
 }
 
@@ -150,7 +150,7 @@ body {
 
 .menu ul li a {
 	text-decoration: none;
-	color: white;
+	color: black;
 	display: inline-block;
 	height: 70px;
 	width: 	200px;
