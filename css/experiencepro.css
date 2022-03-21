@@ -1,4 +1,4 @@
-@font-face { font-family: Quicksand_Book; src: url('css/Quicksand_Book.otf'); }
+@font-face { font-family: Quicksand_Book; src: url('Quicksand_Book.otf'); }
 
 html {
 	font-family: Quicksand_Book;
@@ -520,4 +520,5 @@ body {
 .txtblack {
 	color: white;
 	font-weight: bold;
+	font-family: Quicksand_Book;
 }
