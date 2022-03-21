@@ -39,8 +39,8 @@ body {
 	overflow: hidden;
 	position: fixed;
 	margin-left: 400px;
-	background-color: #F5F5DC;
-	color: black;
+	background-color: #23232C;
+	color: white;
 	top: 0px;
 	height: 50px;
 	display: block;
@@ -52,7 +52,7 @@ body {
 	overflow: hidden;
 	position: fixed;
 	margin-left: 200px;
-	background-color: #23232C;
+	background-color: #F5F5DC;
 	color: black;
 	top: 0px;
 	height: 50px;
@@ -175,7 +175,7 @@ body {
 .moncv {
 	float: left;
 	text-decoration: none;
-	color: black;
+	color: white;
 	margin-left: 35px;
 	margin-top: 10px;
     width: 200px;
@@ -184,7 +184,7 @@ body {
 .monparcours {
 	float: left;
 	text-decoration: none;
-	color: white;
+	color: black;
 	margin-left: -40px;
 	margin-top: 20px;
     width: 200px;
