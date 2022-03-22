@@ -1,5 +1,10 @@
 @font-face { font-family: Quicksand_Book; src: url('Quicksand_Book.otf'); }
 
+.page {
+	color: black;
+	text-decoration: underline;
+}
+
 .mail {
     float: left;
     position: absolute;
