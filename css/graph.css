@@ -18,6 +18,11 @@ body {
 	text-decoration: underline;
 }
 
+.page {
+	color: black;
+	text-decoration: underline;
+}
+
 .banner {
 	display: block;
 	width: 400px;
