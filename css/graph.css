@@ -13,6 +13,11 @@ body {
 	margin-right: 0;
 }
 
+.comp {
+	color: black;
+	text-decoration: underline;
+}
+
 .banner {
 	display: block;
 	width: 400px;
