@@ -57,6 +57,19 @@ body {
 	top: 0px;
 	height: 50px;
 	display: block;
+	width: 212px;
+}
+
+.banner3 {
+  float: left;
+	overflow: hidden;
+	position: fixed;
+	margin-left: 211px;
+	background-color: #23232C;
+	color: white;
+	top: 0px;
+	height: 50px;
+	display: block;
 	width: 100%;
 }
 
