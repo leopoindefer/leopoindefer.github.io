@@ -1,5 +1,11 @@
 @font-face { font-family: Quicksand_Book; src: url('Quicksand_Book.otf'); }
 
+.photo {
+	float: left;
+	margin-left: 50px;
+	width: 150px;
+	height: 150px;
+
 .page {
 	color: black;
 	text-decoration: underline;
