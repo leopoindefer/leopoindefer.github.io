@@ -735,24 +735,17 @@ input#f-none:checked ~ .graph-container > li:nth-child(3) .bar-inner { height: 0
 input#f-none:checked ~ .graph-container > li:nth-child(4) .bar-inner { height: 0; bottom: -2.5em; }
 input#f-none:checked ~ .graph-container > li:nth-child(5) .bar-inner { height: 0; bottom: -2.5em; }
 /* Product 1 */
-input#f-product1:checked ~ .graph-container > li:nth-child(1) .bar-inner { height: 95%; bottom: 0; }
-input#f-product1:checked ~ .graph-container > li:nth-child(2) .bar-inner { height: 60%; bottom: 0; }
-input#f-product1:checked ~ .graph-container > li:nth-child(3) .bar-inner { height: 30%; bottom: 0; }
-input#f-product1:checked ~ .graph-container > li:nth-child(4) .bar-inner { height: 20%; bottom: 0; }
-input#f-product1:checked ~ .graph-container > li:nth-child(5) .bar-inner { height: 20%; bottom: 0; }
+input#b0:checked ~ .graph-container > li:nth-child(1) .bar-inner { height: 95%; bottom: 0; }
+input#b0:checked ~ .graph-container > li:nth-child(2) .bar-inner { height: 60%; bottom: 0; }
+input#b0:checked ~ .graph-container > li:nth-child(3) .bar-inner { height: 30%; bottom: 0; }
+input#b0:checked ~ .graph-container > li:nth-child(4) .bar-inner { height: 20%; bottom: 0; }
+input#b0:checked ~ .graph-container > li:nth-child(5) .bar-inner { height: 20%; bottom: 0; }
 /* Product 2 */
-input#f-product2:checked ~ .graph-container > li:nth-child(1) .bar-inner { height: 90%; bottom: 0; }
-input#f-product2:checked ~ .graph-container > li:nth-child(2) .bar-inner { height: 80%; bottom: 0; }
-input#f-product2:checked ~ .graph-container > li:nth-child(3) .bar-inner { height: 65%; bottom: 0; }
-input#f-product2:checked ~ .graph-container > li:nth-child(4) .bar-inner { height: 70%; bottom: 0; }
-input#f-product2:checked ~ .graph-container > li:nth-child(5) .bar-inner { height: 80%; bottom: 0; }
-/* Product 3 */
-input#f-product3:checked ~ .graph-container > li:nth-child(1) .bar-inner { height: 70%; bottom: 0; }
-input#f-product3:checked ~ .graph-container > li:nth-child(2) .bar-inner { height: 80%; bottom: 0; }
-input#f-product3:checked ~ .graph-container > li:nth-child(3) .bar-inner { height: 85%; bottom: 0; }
-input#f-product3:checked ~ .graph-container > li:nth-child(4) .bar-inner { height: 100%; bottom: 0; }
-input#f-product3:checked ~ .graph-container > li:nth-child(5) .bar-inner { height: 100%; bottom: 0; }
-
+input#b1:checked ~ .graph-container > li:nth-child(1) .bar-inner { height: 90%; bottom: 0; }
+input#b1:checked ~ .graph-container > li:nth-child(2) .bar-inner { height: 80%; bottom: 0; }
+input#b1:checked ~ .graph-container > li:nth-child(3) .bar-inner { height: 65%; bottom: 0; }
+input#b1:checked ~ .graph-container > li:nth-child(4) .bar-inner { height: 70%; bottom: 0; }
+input#b1:checked ~ .graph-container > li:nth-child(5) .bar-inner { height: 80%; bottom: 0; }
 
 /****************
  * COLOR BUTTONS  *
