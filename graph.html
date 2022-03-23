@@ -38,13 +38,12 @@
                 <input type="radio" name="paint-graph" id="graph-blue" checked="checked" /><label for="graph-blue">Blue</label><br><br>
 
 				<span class="button-label"><font class='comp'>Mes compétences:</font></span>
-                <input type="radio" name="fill-graph" id="f-product1" checked="checked" class="encadre"/><label for="f-product1">Codage</label>
-                <input type="radio" name="fill-graph" id="f-product2" /><label for="f-product2">Outils</label>
-                <input type="radio" name="fill-graph" id="f-product3" /><label for="f-product3">Atouts</label>
+                <input type="radio" name="fill-graph" checked="checked" class="encadre" value="Button 0" id="b0" onclick="changeText();"/><label for="b0">Codage</label>
+                <input type="radio" name="fill-graph" value="Button 1" id="b1" onclick="changeText();"/><label for="b1">Outils</label>
 
                 <ul class="graph-container">
                     <li>
-                        <span>HTML 5/CSS 3</span>
+                        <span id="pText">HTML 5/CSS 3</span>
                         <div class="bar-wrapper">
                             <div class="bar-container">
                                 <div class="bar-background"></div>
@@ -54,7 +53,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>C++</span>
+                        <span id="pText2">C++</span>
                         <div class="bar-wrapper">
                             <div class="bar-container">
                                 <div class="bar-background"></div>
@@ -64,7 +63,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>MySQL</span>
+                        <span id="pText3">Python/MySQL</span>
                         <div class="bar-wrapper">
                             <div class="bar-container">
                                 <div class="bar-background"></div>
@@ -74,7 +73,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>Javascript</span>
+                        <span id="pText4">Javascript/PHP</span>
                         <div class="bar-wrapper">
                             <div class="bar-container">
                                 <div class="bar-background"></div>
@@ -84,7 +83,7 @@
                         </div>
                     </li>
                     <li>
-                        <span>R</span>
+                        <span id="pText5">R</span>
                         <div class="bar-wrapper">
                             <div class="bar-container">
                                 <div class="bar-background"></div>
