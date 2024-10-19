@@ -1,124 +1,128 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Léo Poindefer - BI Analyst Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #101010;
+      color: white;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 0;
+    }
+    .logos img {
+      max-height: 40px;
+      margin: 15px;
+    }
+    .services .card {
+      background-color: #333;
+      border: none;
+    }
+    .card-title, .card-text {
+      color: white;
+    }
+    .footer {
+      padding: 20px;
+      background-color: #222;
+      text-align: center;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
 
-<html>
-	
-	<head>
-		
-		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="css/index.css">		
-		<title>MON CV</title>
-		<link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
-		<meta name="description" content="" >
-		
-	</head>
-		
-		<body><script type="text/css">@font-face { font-family: Quicksand_Book; src: url('Quicksand_book.otf'); } </script>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Léo Poindefer</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/l%C3%A9o-poindefer/">LinkedIn</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://github.com/leopoindefer">GitHub</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-		<header>	
-		
-	<div class="piedpage">
-		<h3 class="contact">Mon site CV vous plaît ?</h3>
-		<a class="button2" href="mecontacter.html">CONTACTEZ MOI</a>
-		<h3 class="download">Télécharger mon CV</h3></br>
-		<a href="CV_Léo_Poindefer.pdf" target="_blank"><img src="images/cv2.jpg" class="cv2"/></a>
-	</div>
+<!-- Hero Section -->
+<div class="hero">
+  <img src="images/pdp.jpg" alt="Profile" class="rounded-circle" style="width: 150px;">
+  <h1>Financial Data Analyst</h1>
+  <p>Hi, I'm Léo Poindefer 👋</p>
+  <a href="#" class="btn btn-outline-light">View My Work</a>
+</div>
 
-	<div class="competences">
-	<h3 class="mescomp">Mes compétences</h3>
-      <div class="codage">
-        <img src="images/developpement2.png" class="developpement"/></br><font class=""><h3>Programmation</h3><font class="">Utilisant les langages tel que Python/HTML 5/CSS 3/PHP/C++ ainsi que Javascript que j'ai su apprendre uniquement en tant qu'autodidacte.</font>
-      </div>
-      <div class="info">
-        <img src="images/laptop2.png" class="laptop"/></br><font class=""><h3>Outils informatique</h3>Je maitrise également de nombreux outils informatiques comme Power BI/Excel/Wordpress/Gretl ainsi que Powerpoint.</font>
-      </div>
-      <div class="graph">
-        <img src="images/bulle2.png" class="bulle"/></br><font class=""><h3>Communication</h3>Ayant une expérience dans le milieu de la vente, je suis à l'aise avec les relations sociales. Je sais également utiliser les réseaux sociaux comme outil de communication. </font>
-      </div>
-      <div class="com">
-        <img src="images/pic2.png" class="pic"/></br><font class=""><h3>Graphisme</h3>Maitrisant les application de graphisme comme Photoshop ou encore Lightroom, je réalise et retouche les images dont j'ai besoin.</font>
-		  </div>
-    </div>
+<!-- Logos Section -->
+<div class="container text-center logos">
+  <div class="row">
+    <div class="col"><img src="https://logodownload.org/wp-content/uploads/2020/04/excel-logo-0.png" alt="Logo"></div>
+    <div class="col"><img src="https://klint-consulting.com/wp-content/uploads/2023/04/Power-BI-Microsoft-logo.png" alt="Logo"></div>
+    <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Microsoft_Power_Automate.svg/2048px-Microsoft_Power_Automate.svg.png" alt="Logo"></div>
+    <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="Logo"></div>
+    <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="Logo"></div>
+  </div>
+</div>
 
-	<div class="exp">
-		<h2 class="mesexp">Mes expériences</h2>
-		<div class="img1"><img src="images/aviva.png" class="aviva"/></br><font class="métier">Standardiste</font></div>
-		<div class="img2"><img src="images/leclerc.png" class="leclerc"/></br><font class="métier">Préparateur de<br> commande</font></div>
-		<div class="img3"><img src="images/papilles.png" class="papilles"/></br><font class="métier">Vente/Manutention</font></div>
-		<div class="img4"><img src="images/normel.jpg" class="normel"/></br><font class="metier2"><NOBR>Tireur de câble</NOBR></font></div>
-	</div>
-
-	<div class="progress">
-		<h2 class="mesatouts">Mes atouts</h2>
-	<div class="tousatouts">
-		<div class="atout">
-			<h4>Bonne humeur</h4>
-			<progress value="200" max="100" class="barre">200 %</progress><font class="pourcentage">100%</font></br>
-		</div>
-		<div class="atout">
-			<h4>Motivé</h4>
-			<progress value="100" max="100" class="barre">100 %</progress><font class="pourcentage">100%</font></br>
-		</div>
-		<div class="atout">
-			<h4>Intéressé</h4>		
-			<progress value="100" max="100" class="barre">100 %</progress><font class="pourcentage">100%</font></br>
-		</div>
-		<div class="atout">
-			<h4>Statistiques/Mathématiques</h4>
-			<progress value="80" max="100" class="barre">80 %</progress><font class="pourcentage">80%</font></br>
-		</div>
-		<div class="atout">
-			<h4>Anglais</h4>
-			<progress value="70" max="100" class="barre">70 %</progress><font class="pourcentage">70%</font></br>
-		</div>
-	</div>
-	</div>
-
-		<div class="description">
-			<img src="images/symbio.png" class="symbio"/>
-		</div>	
-	
-		<div class="slide">
-            <img class="image" src="images/fond7.jpg" />   
-		<font class="presentation"><br><h2>DATA ANALYST CHEZ SYMBIO</h2>
-            Actuellement en 3ème année de licence d’Economie et de Gestion et admis en mastère intelligence artificielle et management au sein de l’école IA School. Pour me préparer concrètement au métier de data analyst, j’ai choisi la voie de l’alternance chez Symbio, ce qui me permet d’allier enseignement théorique et formation pratique.</font>
-            <a class="button" href="mecontacter.html">CONTACTEZ MOI</a>
+<!-- Services Section -->
+<div class="container services py-5">
+  <h2 class="text-center mb-4">Collaborate with data-driven professionals to optimize results.</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">BI Reporting & Analysis</h5>
+          <p class="card-text">Creating and optimizing financial reports for informed decision-making.</p>
         </div>
-		
-		<div class="banner2">
-				
-			<div class="menu">
-				<ul>
-					<li><a href="diplome.html">Diplômes et formations</a></li>
-					<li><a href="experiencepro.html">Expériences professionelles</a></li>
-					<li><a href="graph.html">Compétences</a></li>
-					<li><a href="mecontacter.html">Coordonnées</a></li>
-				</ul>
-			</div>
-			
-		</div>
-		
-		<div class="banner">
-			<a href="index"><font size="+2" class="nom">Léo Poindefer</a>
-		</div>	
-			
-		<div class="bannerinscription">
-			<div class="trait"/><a href="index.html" class="moncv">MON CV</a>
-		</div>
-		
-		<div class="bannerconnect">
-			<div class="trait2"/><a href="parcours.html" class="monparcours">MON PARCOURS</a></font>
-			<div class="trait3"/>
-		</div>	
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Web Development</h5>
+          <p class="card-text">Developing websites for professionals with cutting-edge technologies.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Data Visualization</h5>
+          <p class="card-text">Crafting visually compelling dashboards for actionable insights.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Process Automation</h5>
+          <p class="card-text">Automating financial processes for efficiency and accuracy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-		<div class="bannerportfolio">
-			<<a href="portfolio.html" class="portfolio">MON PORTFOLIO</a></font>
-			<div class="trait4"/>
-		</div>	
-			
-		</header>
-		
-		<footer>
-		</footer>
-	
-	</body>
+<!-- Footer -->
+<div class="footer">
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/l%C3%A9o-poindefer/">LinkedIn</a>
+    <a href="https://github.com/leopoindefer">GitHub</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
 </html>
