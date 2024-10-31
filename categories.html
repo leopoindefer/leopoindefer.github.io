@@ -10,7 +10,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="graph.html">Léo Poindefer</a>
+  <a class="navbar-brand" href="index.html">Léo Poindefer</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,64 +23,30 @@
   </div>
 </nav>
 
-<div class="hero">
-  <img src="images/pp.jpg" alt="Profile" class="rounded-circle" style="width: 150px;">
-  <h1>Financial Data Analyst</h1>
-  <p>Hi, I'm Léo Poindefer 👋</p>
-  <a href="categories.html" class="btn btn-outline-light">View My Work</a>
-</div>
-
-<div class="container text-center logos">
+<div class="container view-my-work py-5 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
   <div class="row">
-    <marquee>
-      <img src="https://logodownload.org/wp-content/uploads/2020/04/excel-logo-0.png" alt="Logo">
-      <img src="https://klint-consulting.com/wp-content/uploads/2023/04/Power-BI-Microsoft-logo.png" alt="Logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Microsoft_Power_Automate.svg/2048px-Microsoft_Power_Automate.svg.png" alt="Logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png" alt="Logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="Logo">
-    </marquee>
-  </div>
-</div>
-
-<div class="container services py-5">
-  <h2 class="text-center mb-4">Collaborate with data-driven professionals to optimize results.</h2>
-  <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-6 mb-4">
       <div class="card text-center">
         <div class="card-body">
-          <h5 class="card-title">BI Reporting & Analysis</h5>
-          <p class="card-text">Creating visually compelling reports for informed decision-making.</p>
+          <h5 class="card-title">Business Intelligence</h5>
+          <p class="card-text">Creating automated reports for informed decision-making.</p>
+          <a href="business-intelligence.html" class="btn btn-outline-light">See Projects</a>
         </div>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-6 mb-4">
       <div class="card text-center">
         <div class="card-body">
           <h5 class="card-title">Process Automation</h5>
-          <p class="card-text">Automating financial processes for efficiency and accuracy.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title">Machine Learning & AI</h5>
-          <p class="card-text">Advanced algorithms to predict trends and optimize business strategies.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title">Web Development</h5>
-          <p class="card-text">Developing websites for professionals with cutting-edge technologies.</p>
+          <p class="card-text">Optimizing workflows with automated financial tools.</p><br>
+          <a href="process.html" class="btn btn-outline-light">See Projects</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="footer">
+<div class="footer mt-auto">
   <div class="social-icons">
     <a href="https://www.linkedin.com/in/l%C3%A9o-poindefer/">LinkedIn</a>
     <a href="https://github.com/leopoindefer">GitHub</a>
@@ -99,33 +65,33 @@
   body {
     background-color: #101010;
     color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
-  .hero {
-    text-align: center;
-    padding: 100px 0;
+  
+  .view-my-work {
+    flex: 1; /* This ensures that the content takes up available space and pushes footer to the bottom */
   }
-  .logos img {
-    max-height: 40px;
-    margin: 15px;
-  }
-  .services .card {
-    background-color: #333;
-    border: none;
-  }
+
   .card {
     background-color: #333;
     border: none;
     box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3); /* Light gray shadow */
     border-radius: 10px;
   }
+
   .card-title, .card-text {
     color: white;
   }
+
   .footer {
     padding: 20px;
     background-color: #222;
     text-align: center;
+    margin-top: auto;
   }
+
   .social-icons a {
     color: white;
     margin: 0 10px;
