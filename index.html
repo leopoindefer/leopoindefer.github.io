@@ -96,6 +96,7 @@
 </html>
 
 <style>
+@media screen and (min-width: 990px) {
   body {
     background-color: #101010;
     color: white;
@@ -115,7 +116,7 @@
   .card {
     background-color: #333;
     border: none;
-    box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3); /* Light gray shadow */
+    box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3);
     border-radius: 10px;
   }
   .card-title, .card-text {
@@ -130,4 +131,44 @@
     color: white;
     margin: 0 10px;
   }
+}
+
+/* mobile */
+@media screen and (max-width: 990px) {
+  body {
+    background-color: #101010;
+    color: white;
+  }
+  .hero {
+    text-align: center;
+    padding: 100px 0;
+  }
+  .logos img {
+    max-height: 40px;
+    margin: 15px;
+  }
+  .services .card {
+    background-color: #333;
+    border: none;
+  }
+  .card {
+    margin-top: 15px;
+    background-color: #333;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3);
+    border-radius: 10px;
+  }
+  .card-title, .card-text {
+    color: white;
+  }
+  .footer {
+    padding: 20px;
+    background-color: #222;
+    text-align: center;
+  }
+  .social-icons a {
+    color: white;
+    margin: 0 10px;
+  }
+}
 </style>
