@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Reporting Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon" type="image/vnd.icon" href="https://cdn-icons-png.flaticon.com/512/362/362929.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="index.html">Léo Poindefer</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/l%C3%A9o-poindefer/">LinkedIn</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://github.com/leopoindefer">GitHub</a></li>
+      <li class="nav-item"><a class="nav-link" href="mailto:poindeferleo@hotmail.fr">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container py-5" style="margin-top: 80px;">
+  <div class="dashboard-header text-center text-white mb-4">"Streamline your Financial Reporting with automation and reclaim valuable time for strategic insights."</div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card text-center p-3">
+        <div class="kpi">$36,097</div>
+        <div class="kpi-title">Revenue</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center p-3">
+        <div class="kpi">$27,678</div>
+        <div class="kpi-title">EBITDA</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center p-3">
+        <div class="kpi">$8,419</div>
+        <div class="kpi-title">EBIT</div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center p-3">
+        <div class="kpi">$4,500</div>
+        <div class="kpi-title">Net Result</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-8">
+      <div class="card p-4">
+        <div class="header-bar mb-3 d-flex justify-content-between align-items-center">
+          <span class="section-title">Actuals vs Budget</span>
+          <select class="form-control form-control-sm bg-dark text-white border-0 w-auto" id="timeframe" onchange="updateChart()">
+            <option value="monthly">Monthly</option>
+            <option value="quarterly">Quarter</option>
+            <option value="yearly">Year</option>
+          </select>
+        </div>
+        <div class="chart bg-secondary rounded" style="height: 200px;">
+          <canvas id="financialChart" style="width:100%;max-width:700px; height:200px; background-color:white;"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-3">
+        <span class="section-title">P&L by Cost Center</span>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+          <div>
+            <span class="small-text">Sales</span>
+            <h5 class="m-0">$45,300</h5>
+            <span class="badge badge-success">Profit</span>
+          </div>
+          <i class="fas fa-chart-line fa-2x text-secondary"></i>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+          <div>
+            <span class="small-text">Marketing</span>
+            <h5 class="m-0">$12,700</h5>
+            <span class="badge badge-danger">Loss</span>
+          </div>
+          <i class="fas fa-bullhorn fa-2x text-secondary"></i>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+          <div>
+            <span class="small-text">Operations</span>
+            <h5 class="m-0">$28,000</h5>
+            <span class="badge badge-success">Profit</span>
+          </div>
+          <i class="fas fa-cogs fa-2x text-secondary"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <div class="card p-3 text-center">
+        <span class="section-title">Expense Ratio</span>
+        <h3>72%</h3>
+        <span class="badge badge-warning">Moderate Impact</span>
+        <p class="small-text">Percentage of revenue allocated to expenses. Aim to optimize for higher profitability.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card p-3 text-center">
+        <span class="section-title">Profit Margin</span>
+        <h3>18%</h3>
+        <span class="badge badge-success">Healthy</span>
+        <p class="small-text">Net profit as a percentage of revenue. Indicates overall efficiency and profitability.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card p-4 mt-4 text-center">
+    <h4>Leverage My Expertise to Elevate Your Financial Reporting</h4>
+    <p class="small-text">Discover the value I can bring to your team. For more insights, feel free to reach out.</p>
+    <a href="https://www.linkedin.com/in/l%C3%A9o-poindefer/" class="btn btn-primary mt-2">Contact Me on LinkedIn</a>
+    <a href="mailto:poindeferleo@hotmail.fr" class="btn btn-outline-primary mt-2">Email Me</a>
+  </div>
+</div>
+
+<div class="footer mt-4">
+  <div class="social-icons text-center">
+    <a href="https://www.linkedin.com/in/l%C3%A9o-poindefer/" class="text-white mx-3">LinkedIn</a>
+    <a href="https://github.com/leopoindefer" class="text-white mx-3">GitHub</a>
+    <a href="mailto:poindeferleo@hotmail.fr" class="text-white mx-3">Contact</a>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // Initial chart data
+  const monthlyData = [860, 1140, 1060, 1070, 1110, 3330, 4210, 7830, 8478, 8700, 8900];
+  const quarterlyData = [3000, 4000, 7000, 10000];
+  const yearlyData = [30000, 42000, 50000, 60000];
+
+  const ctx = document.getElementById('financialChart').getContext('2d');
+  let financialChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      datasets: [{
+        label: 'Actuals',
+        data: monthlyData,
+        borderColor: 'red',
+        fill: false
+      }, {
+        label: 'Budget',
+        data: monthlyData.map(val => val * 1.1),
+        borderColor: 'yellow',
+        fill: false
+      }]
+    },
+    options: {
+      legend: { display: true },
+      scales: {
+        xAxes: [{ ticks: { fontColor: 'black' }, gridLines: { color: 'white' } }],
+        yAxes: [{ ticks: { fontColor: 'black' }, gridLines: { color: '#e8e4e3' } }]
+      }
+    }
+  });
+
+  function updateChart() {
+    const timeframe = document.getElementById('timeframe').value;
+    if (timeframe === 'monthly') {
+      financialChart.data.labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      financialChart.data.datasets[0].data = monthlyData;
+      financialChart.data.datasets[1].data = monthlyData.map(val => val * 1.1);
+    } else if (timeframe === 'quarterly') {
+      financialChart.data.labels = ["Q1", "Q2", "Q3", "Q4"];
+      financialChart.data.datasets[0].data = quarterlyData;
+      financialChart.data.datasets[1].data = quarterlyData.map(val => val * 1.1);
+    } else if (timeframe === 'yearly') {
+      financialChart.data.labels = ["2021", "2022", "2023", "2024"];
+      financialChart.data.datasets[0].data = yearlyData;
+      financialChart.data.datasets[1].data = yearlyData.map(val => val * 1.1);
+    }
+    financialChart.update();
+  }
+</script>
+
+</body>
+</html>
+
+<style>
+@media screen and (min-width: 990px) {
+  body {
+    background-color: #101010;
+    color: white;
+  }
+  .dashboard-header {
+    font-size: 1.5rem;
+    color: #E0E0E0;
+    padding: 20px 0;
+  }
+  .card {
+    background-color: #333;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3); /* Light gray shadow */
+    border-radius: 10px;
+  }
+  .kpi {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .kpi-title {
+    font-size: 1rem;
+    color: #B0B0B0;
+  }
+  .section-title {
+    font-size: 1.1rem;
+    color: #E0E0E0;
+  }
+  .footer {
+    padding: 20px;
+    background-color: #222;
+    text-align: center;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 990px) {
+  body {
+    background-color: #101010;
+    color: white;
+  }
+  .hero {
+    text-align: center;
+    padding: 100px 0;
+  }
+  .logos img {
+    max-height: 40px;
+    margin: 15px;
+  }
+  .services .card {
+    background-color: #333;
+    border: none;
+  }
+  .card {
+    margin-top: 15px;
+    background-color: #333;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3);
+    border-radius: 10px;
+  }
+  .card-title, .card-text {
+    color: white;
+  }
+  .footer {
+    padding: 20px;
+    background-color: #222;
+    text-align: center;
+  }
+  .social-icons a {
+    color: white;
+    margin: 0 10px;
+  }
+}
+</style>

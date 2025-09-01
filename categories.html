@@ -1,17 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Léo Poindefer - Data Analyst Portfolio</title>
+  <title>Léo Poindefer - Portfolio Data Analyst</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="icon" type="image/vnd.icon" href="https://cdn-icons-png.flaticon.com/512/362/362929.png">
 </head>
 <body>
 
+  <style>
+    body {
+      background-color: #101010;
+      color: white;
+    }
+    .lang-switch {
+      position: fixed;
+      top: 60px;
+      right: 15px;
+      cursor: pointer;
+      z-index: 2000;
+    }
+    .lang-switch img {
+      width: 20px;   /* largeur fixe */
+      height: 20px;  /* hauteur identique */
+      object-fit: cover; /* recadre l'image sans la déformer */
+      border-radius: 50%; /* rend l'image parfaitement ronde */
+      border: 2px solid white; /* optionnel : petit contour propre */
+    }
+    .section {
+      padding: 70px 0;
+    }
+    .section img {
+      max-width: 70%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0px 4px 20px rgba(200, 200, 200, 0.5);
+    }
+    .card {
+      background-color: #333;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3);
+    }
+  </style>
+
+<div class="lang-switch" id="langSwitch">
+  <img src="https://flagcdn.com/w40/fr.png" alt="Changer de langue" id="langFlag">
+</div>
+
+<script>
+  const langSwitch = document.getElementById("langSwitch");
+  const langFlag = document.getElementById("langFlag");
+  let currentLang = "fr";
+
+  langSwitch.addEventListener("click", () => {
+    currentLang = currentLang === "fr" ? "en" : "fr";
+
+    // Changer le drapeau
+    langFlag.src = currentLang === "fr"
+      ? "https://flagcdn.com/w40/fr.png"
+      : "https://flagcdn.com/w40/gb.png";
+
+    // Traduire tout le contenu
+    document.querySelectorAll("[data-fr]").forEach(el => {
+      el.textContent = el.getAttribute(`data-${currentLang}`);
+    });
+  });
+</script>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="index.html">Léo Poindefer</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -29,17 +90,17 @@
       <div class="card text-center">
         <div class="card-body">
           <h5 class="card-title">Business Intelligence</h5>
-          <p class="card-text">Creating automated reports for informed decision-making.</p>
-          <a href="business-intelligence.html" class="btn btn-outline-light">See Projects</a>
+          <p class="card-text">Création de rapports automatisés pour une prise de décision éclairée.</p>
+          <a href="business-intelligence.html" class="btn btn-outline-light">Voir les projets</a>
         </div>
       </div>
     </div>
     <div class="col-md-6 mb-4">
       <div class="card text-center">
         <div class="card-body">
-          <h5 class="card-title">Process Automation</h5>
-          <p class="card-text">Optimizing workflows with automated financial tools.</p><br>
-          <a href="process.html" class="btn btn-outline-light">See Projects</a>
+          <h5 class="card-title">Automatisation des processus</h5>
+          <p class="card-text">Optimisation des flux de travail grâce à des outils financiers automatisés.</p><br>
+          <a href="process.html" class="btn btn-outline-light">Voir les projets</a>
         </div>
       </div>
     </div>
@@ -71,13 +132,13 @@
   }
   
   .view-my-work {
-    flex: 1; /* This ensures that the content takes up available space and pushes footer to the bottom */
+    flex: 1; /* Le contenu prend l’espace disponible et pousse le pied de page en bas */
   }
 
   .card {
     background-color: #333;
     border: none;
-    box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3); /* Light gray shadow */
+    box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3);
     border-radius: 10px;
   }
 

@@ -1,17 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Léo Poindefer - Data Analyst Portfolio</title>
+  <title>Léo Poindefer - Portfolio Data Analyst</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="icon" type="image/vnd.icon" href="https://cdn-icons-png.flaticon.com/512/362/362929.png">
 </head>
 <body>
 
+  <style>
+    body {
+      background-color: #101010;
+      color: white;
+    }
+    .lang-switch {
+      position: fixed;
+      top: 60px;
+      right: 15px;
+      cursor: pointer;
+      z-index: 2000;
+    }
+    .lang-switch img {
+      width: 20px;   /* largeur fixe */
+      height: 20px;  /* hauteur identique */
+      object-fit: cover; /* recadre l'image sans la déformer */
+      border-radius: 50%; /* rend l'image parfaitement ronde */
+      border: 2px solid white; /* optionnel : petit contour propre */
+    }
+    .section {
+      padding: 70px 0;
+    }
+    .section img {
+      max-width: 70%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0px 4px 20px rgba(200, 200, 200, 0.5);
+    }
+    .card {
+      background-color: #333;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3);
+    }
+  </style>
+
+<div class="lang-switch" id="langSwitch">
+  <img src="https://flagcdn.com/w40/fr.png" alt="Changer de langue" id="langFlag">
+</div>
+
+<script>
+  const langSwitch = document.getElementById("langSwitch");
+  const langFlag = document.getElementById("langFlag");
+  let currentLang = "fr";
+
+  langSwitch.addEventListener("click", () => {
+    currentLang = currentLang === "fr" ? "en" : "fr";
+
+    // Changer le drapeau
+    langFlag.src = currentLang === "fr"
+      ? "https://flagcdn.com/w40/fr.png"
+      : "https://flagcdn.com/w40/gb.png";
+
+    // Traduire tout le contenu
+    document.querySelectorAll("[data-fr]").forEach(el => {
+      el.textContent = el.getAttribute(`data-${currentLang}`);
+    });
+  });
+</script>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="index.html">Léo Poindefer</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Afficher la navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
@@ -27,11 +88,11 @@
   <div class="section d-flex align-items-center">
     <div class="row w-100">
       <div class="col-md-6">
-        <h3>Transactions Matching (Bank and Invoice Reconciliation)</h3>
-        <p>Automate bank and invoice reconciliation using advanced matching algorithms. This automation compares transactions with bank records, significantly reducing errors and speeding up financial verification processes.</p>
+        <h3>Rapprochement des Transactions (Banques et Factures)</h3>
+        <p>Automatiser le rapprochement bancaire et facturier grâce à des algorithmes de correspondance avancés. Cette automatisation compare les transactions avec les relevés bancaires, réduisant considérablement les erreurs et accélérant les processus de vérification financière.</p>
       </div>
       <div class="col-md-6 d-flex justify-content-center align-items-center">
-        <img src="https://img.freepik.com/free-vector/electronic-documentation-man-with-registration-checking-repository-log-online-approval-screen-form-validation-page-expense-chronicles-vector-isolated-concept-metaphor-illustration_335657-4323.jpg" alt="Transactions Matching">
+        <img src="https://img.freepik.com/free-vector/electronic-documentation-man-with-registration-checking-repository-log-online-approval-screen-form-validation-page-expense-chronicles-vector-isolated-concept-metaphor-illustration_335657-4323.jpg" alt="Rapprochement des Transactions">
       </div>
     </div>
   </div>
@@ -39,11 +100,11 @@
   <div class="section d-flex align-items-center flex-row-reverse">
     <div class="row w-100">
       <div class="col-md-6 d-flex justify-content-center align-items-center">
-        <img src="https://img.freepik.com/free-vector/managers-looking-chart-monitor_1262-19283.jpg" alt="Approval Workflows">
+        <img src="https://img.freepik.com/free-vector/managers-looking-chart-monitor_1262-19283.jpg" alt="Flux d’Approbation">
       </div>
       <div class="col-md-6">
-        <h3>Set Up Approval Workflows</h3>
-        <p>Optimize the management of purchase requests and orders with automated approval workflows. This solution accelerates approvals, ensuring each request goes through the proper validation stages, while maintaining a record of control processes for each transaction.</p>
+        <h3>Mise en Place de Flux d’Approbation</h3>
+        <p>Optimiser la gestion des demandes d’achats et des commandes avec des flux d’approbation automatisés. Cette solution accélère les validations, garantit que chaque demande passe par les étapes nécessaires, tout en conservant une traçabilité complète des processus de contrôle pour chaque transaction.</p>
       </div>
     </div>
   </div>
@@ -51,20 +112,20 @@
   <div class="section d-flex align-items-center">
     <div class="row w-100">
       <div class="col-md-6">
-        <h3>eInvoicing</h3>
-        <p>Streamline invoice processing with automated digitization via invoice scanning. This process captures essential information directly from the document and integrates it into the accounting system, reducing the need for manual intervention and enhancing operational efficiency.</p>
+        <h3>Facturation Électronique</h3>
+        <p>Simplifier le traitement des factures grâce à la numérisation automatisée via la lecture des documents. Ce processus capture les informations essentielles directement depuis la facture et les intègre dans le système comptable, réduisant le besoin d’intervention manuelle et améliorant l’efficacité opérationnelle.</p>
       </div>
       <div class="col-md-6 d-flex justify-content-center align-items-center">
-        <img src="https://img.freepik.com/free-vector/online-payment-account-credit-card-details-personal-information-financial-transaction-cartoon-character-bank-worker-internet-banking_335657-2379.jpg" alt="Invoice Digitization">
+        <img src="https://img.freepik.com/free-vector/online-payment-account-credit-card-details-personal-information-financial-transaction-cartoon-character-bank-worker-internet-banking_335657-2379.jpg" alt="Numérisation des Factures">
       </div>
     </div>
   </div>
 
   <div class="card p-4 mt-4 text-center">
-    <h4>Leverage My Expertise to Automate your Processes</h4>
-    <p class="small-text">Discover the value I can bring to your team. For more insights, feel free to reach out.</p>
-    <a href="https://www.linkedin.com/in/l%C3%A9o-poindefer/" class="btn btn-primary mt-2">Contact Me on LinkedIn</a>
-    <a href="mailto:poindeferleo@hotmail.fr" class="btn btn-outline-primary mt-2">Email Me</a>
+    <h4>Tirez parti de mon expertise pour automatiser vos processus</h4>
+    <p class="small-text">Découvrez la valeur que je peux apporter à votre équipe. Pour en savoir plus, n’hésitez pas à me contacter.</p>
+    <a href="https://www.linkedin.com/in/l%C3%A9o-poindefer/" class="btn btn-primary mt-2">Me contacter sur LinkedIn</a>
+    <a href="mailto:poindeferleo@hotmail.fr" class="btn btn-outline-primary mt-2">M’écrire par email</a>
   </div><br>
 
 </div>
@@ -93,10 +154,10 @@
     padding: 70px 0;
   }
   .section img {
-    max-width: 70%; /* Reduce image size */
+    max-width: 70%; /* Taille des images réduite */
     height: auto;
     border-radius: 8px;
-    box-shadow: 0px 4px 20px rgba(200, 200, 200, 0.5); /* Light gray shadow */
+    box-shadow: 0px 4px 20px rgba(200, 200, 200, 0.5); /* Ombre grise légère */
   }
   .section h3 {
     font-size: 1.5rem;
@@ -120,7 +181,7 @@
     border: none;
     border-radius: 10px;
     color: white;
-    box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3); /* Light gray shadow */
+    box-shadow: 0px 4px 10px rgba(200, 200, 200, 0.3); /* Ombre grise légère */
     border-radius: 10px;
   }
 </style>
